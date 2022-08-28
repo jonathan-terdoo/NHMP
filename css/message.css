@@ -1,0 +1,143 @@
+main .main-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+main .main-wrapper .users-page{
+    width: 350px;
+    height: 100vh;
+    background-color: #bbb;  
+    overflow-y: auto;  
+}
+main .main-wrapper .users-page .wrap-this{
+    padding: 20px;
+    background-color: rgb(161, 160, 160);
+}
+main .main-wrapper .users-page input:focus{
+    border-bottom: 2px solid #8a5b14;
+}
+main .main-wrapper .users-page input::placeholder{
+    color: white;
+}
+main .main-wrapper .users-page input{
+    width: 100%;
+    height: 45px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-indent: 4px;
+    border-bottom: 2px solid #148a5f;
+    font-size: 14pt;
+    color: #148a5f;
+    border-radius: 20px;
+}
+main .main-wrapper .users-page .users ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(172, 169, 169);
+    margin-bottom: 12pt;
+}
+main .main-wrapper .message{
+    flex-grow: 1;
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+    /* box-shadow: 0 2px 9px 0 inset rgba(0, 0, 0, 0.2); */
+}
+main .main-wrapper .message .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(161, 160, 160);
+}
+main .main-wrapper .message .head .wrap-this-head{
+    display: flex;
+    align-items: center;
+}
+main .main-wrapper .message .head .wrap-this-head span{
+    margin-left: 20pt;
+    color: rgb(51, 141, 99);
+    font-size: 19pt;
+}
+main .main-wrapper .message .head .online{
+    color: green;
+}
+main .main-wrapper .message .body{
+    height: 73vh;
+}
+main .main-wrapper .message .body .sender{
+    max-width: calc(100% - 130px);
+    float: right;
+    display: flex;
+}
+main .main-wrapper .message .body .sender .msg{
+    background-color: #148a5f;
+    color: white;
+    margin-right: 20pt;
+    margin-left: 90pt;
+    padding: 10px;
+    word-wrap: break-word;
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+    border-bottom-left-radius: 19px;
+}
+main .main-wrapper .message .body .sender small{
+    font-size: 14pt;
+    color: green;
+    margin-left: 90pt;
+}
+main .main-wrapper .message .body .receiver{    
+    margin-top: 17px;
+    margin-left: 17px;
+}
+main .main-wrapper .message .body .receiver p{
+    background-color: rgb(128, 125, 125);
+    color: white;
+    margin-left: 20pt;    
+    padding: 10px;
+    max-width: calc(100% - 130px);
+    word-wrap: break-word;
+    border-top-right-radius: 19px;
+    border-bottom-left-radius: 19px;
+    border-bottom-right-radius: 19px;
+}
+main .main-wrapper .message .body{
+    overflow-y: auto;
+}
+main .main-wrapper .message .body .receiver small{
+    font-size: 14pt;
+    color: green;
+    margin-left: 20pt;
+}
+main .main-wrapper .message .send-pane form{
+    background-color: rgb(51, 141, 99);
+    padding: 18px 30px;   
+    display: flex;
+    justify-content: space-between;
+}
+main .main-wrapper .message .send-pane form input{
+    height: 45px;
+    width: calc(100% - 58px);
+    border-radius: 30px;
+    background-color: #4c7063;
+    outline: none;
+    font-size: 15pt;
+    color: white;
+    text-indent: 15px;
+    border: none;
+}
+main .main-wrapper .message .send-pane form input::placeholder{
+    color: white;
+}
+main .main-wrapper .message .send-pane form button{
+    width: 60px;
+    text-align: center;
+    margin-left: 12px;
+    border-radius: 10px;
+    color: #148a5f;
+    border: none;
+    outline: none;
+    font-size: 14pt;
+}

@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+}
+.sidebar{
+    width: 300px;
+    height: 100vh;
+    bottom: 0;
+    overflow: auto;
+    background: black;
+}
+.logo{
+    width: 200px;
+    height: 200px;
+    background: blue;
+    margin: 20px 50px;
+    border-radius: 50%;
+}
+.links{
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+}
+.panel{
+   height: 200px;
+   background: white;
+   margin: 0 20px;
+}
+button{
+    height: 40px;
+    font-size: 15pt;
+    border: none;
+    margin: 10px 0;
+    text-align: left;
+    padding: 0 30px;
+    background: rgb(19, 18, 18);
+    color: #fff;
+}
+.line{
+    width: 40rem;
+    height: 1px;
+    background: purple;
+    background: linear-gradient(to right,rgb(75, 7, 75),rgb(226, 39, 226),rgb(233, 202, 23)) no-repeat;
+    position: absolute;
+}
+.block{
+    display: block;
+}
+.wrap{
+    display: flex;
+    position: relative;
+    margin: 20px 20px;
+}
+.wrap p{
+    margin-left: 35px;
+}
+.wrap input{
+    display: none;
+}
+.wrap .checkbox{
+    width: 25px;
+    height: 25px;
+    border-radius: 2px;
+    background: grey;
+    border: 1px solid#bbb;
+    position: absolute;
+}
+.wrap .checkbox:hover{
+    background: rgb(177, 177, 177);
+}
+.wrap .checkbox::before{
+    content: "";
+    transform: rotate(45deg);
+    width:5px;
+    height: 3px;
+    background: white;
+    top: 3px;
+}

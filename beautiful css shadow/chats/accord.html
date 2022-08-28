@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tog.css">
+    <title>Toggle like jquery</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <div class="links">
+            <button id="btn">Button</button>
+            <span class="panel">
+                <p>
+                    Hi am trying to make a similar jquery slide up and down and Toggle
+                    <br>
+                    Hi am trying to make a similar jquery slide up and down and Toggle
+                </p>
+            </span>
+            <!-- <button id="btn">Button</button>
+            <span class="panel"></span>
+            <button id="btn">Button</button>
+            <span class="panel"></span>
+            <button id="btn">Button</button>
+            <span class="panel"></span> -->
+        </div>
+    </div>
+    <div class="block">
+        <h1>Hi am trying to make a similar jquery slide up and down and Toggle</h1>
+        <span class="line"></span>
+        <div class="wrap">
+            <label>
+                <input type="checkbox" name="" id="checkbox" checked>
+                <span class="checkbox"></span>
+            </label>
+            <p>Some text here</p>
+        </div>
+        <div class="wrap">
+            <label>
+                <input type="checkbox" name="" id="checkbox">
+                <span class="checkbox"></span>
+            </label>
+            <p>Some text here</p>
+        </div>
+        <div class="wrap">
+            <label>
+                <input type="checkbox" name="" id="checkbox" >
+                <span class="checkbox"></span>
+            </label>
+            <p>Some text here</p>
+        </div>
+        <div class="wrap">
+            <label>
+                <input type="checkbox" name="" id="checkbox" >
+                <span class="checkbox"></span>
+            </label>
+            <p>Some text here</p>
+        </div>
+    </div>
+    <script>
+        let slideUp = (target, duration) => {
+            target.style.transitionProperty = 'height, margin, padding';
+            target.style.transitionDuration = duration + 'ms';
+            target.style.boxSizing = 'border-box';
+            target.style.height = target.offsetHeight + 'px';
+            target.style.height = 0;
+            target.style.paddingTop = 0;
+            target.style.paddingBottom = 0;
+            target.style.marginTop = 0;
+            target.style.marginBottom = 0;
+            target.style.overflow = 'hidden';
+
+            window.setTimeout(() => {
+                target.style.display = 'none';
+                target.style.removeProperty('height');
+                target.style.removeProperty('padding-top');
+                target.style.removeProperty('padding-bottom');
+                target.style.removeProperty('margin-top');
+                target.style.removeProperty('margin-bottom');
+                target.style.removeProperty('overflow');
+                target.style.removeProperty('transition-duration');
+                target.style.removeProperty('transition-property');
+            }, duration)
+        }
+        let slideDown = (target, duration) => {
+            let height = target.offsetHeight;
+            target.style.paddingTop = 0;
+            target.style.paddingBottom = 0;
+            target.style.marginTop = 0;
+            target.style.marginBottom = 0;
+            target.style.overflow = 'hidden';
+            target.style.boxSizing = 'border-box';
+            target.style.transitionProperty = 'height, margin, padding';
+            target.style.transitionDuration = duration + 'ms';
+            target.style.height = height + 'px';
+            target.style.display = 'block';
+
+            window.setTimeout(() => {
+                target.style.removeProperty('height');
+                target.style.removeProperty('overflow');
+                target.style.removeProperty('transition-duration');
+                target.style.removeProperty('transition-property');
+            }, duration)
+        }
+        let slideToggle = (target, duration) => {
+            if(window.getComputedStyle(target).display === 'none') {
+                return slideDown(target, duration);
+            }else{
+                return slideUp(target, duration);
+            }
+        }
+        let $ = (b) => document.querySelector(b);
+        $('#btn').onclick = () => {
+            if($('.panel').style.display === 'none'){
+                slideDown($('.panel', 300));
+            }else{
+                slideToggle($('.panel'), 300);
+            }
+            // alert();
+        }
+    </script>
+</body>
+</html>

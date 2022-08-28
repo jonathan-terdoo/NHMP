@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-image: url('../images/NAHMP_Logo.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(36, 172, 115);
+}
+main header{
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    font-size: 15pt;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+main header marquee{
+   font-size: 16pt;
+   color: white;
+}
+main form{
+    width: 40%;
+    min-width: 40%;
+    margin: 12pt auto;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 2px 9px 2px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+main form .wrap-logo{
+    background-color: rgb(36, 172, 115);
+    margin: -20px -20px;
+}
+main form .logo{
+    text-align: center;
+    background-image: linear-gradient(to right,#59105c,#5f1531, #0e4732);
+    background-image: -webkit-linear-gradient(to right,#59105c,#5f1531, #0e4732);
+    -webkit-background-clip: text;
+    -webkit-background-size: 100%;
+    -webkit-text-fill-color: transparent;
+    font-weight: 100;
+    font-size: 12pt;
+    margin-bottom: 23px;
+}
+main form .name-area{
+    display: flex;
+    border-top: 3px dotted black;    
+}
+main form .name-area .shift{
+    margin-left: 20px;
+    flex-grow: 1;
+}
+:is(form .field input, select){
+    width: 100%;
+    outline: none;
+    height: 45px;
+    border: none;
+    border-bottom: 3px solid rgb(36, 172, 115);
+    background-color: transparent;
+    font-size: 16pt;
+    color: rgb(184, 110, 0);
+}
+:is(form .field input, select)::placeholder{
+    color: #999;
+}
+main form .field label{
+    font-size: 15pt;
+    color: rgb(33, 122, 96);
+    margin-top: 20pt;
+    margin-bottom: 20pt;
+}
+main form button{
+    width: 100%;
+    height: 45px;
+    margin-top: 12px;
+    border: none;
+    outline: none;
+    border-radius: 9px;
+    font-size: 16pt;
+    background-color: rgb(36, 172, 115);
+    color: white;
+}
+/* main form .wrap-pass .round-it{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid rgb(190, 142, 8);
+    text-align: center;
+} */
+main form .wrap-pass input[type="checkbox"]{
+    width: 30px;
+    height: 30px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}

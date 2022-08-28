@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    columns: 5;
+}
+svg{
+    width: 45px;
+    height: 45px;
+}

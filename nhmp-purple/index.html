@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="../jquery-3.6.0.js"></script>
+    <title>nhmp purple</title>
+</head>
+<body>
+    <div class="parent">
+        <nav>
+            <div class="logo">
+                <img src="../images/NAHMP_Logo.png" width="200" height="200" alt="" srcset="">
+            </div>
+            <p class="h1">Dashboard</p>
+            <div class="links">
+                <button class="li">About us</button>
+                <div class="panel">
+                    <button>Link1</button>
+                    <button>Link1</button>
+                    <button>Link1</button>
+                    <button>Link1</button>                        
+                </div>
+                <button class="li">About us</button>
+                <div class="panel">
+                    <button>Link1</button>
+                    <button>Link1</button>
+                    <button>Link1</button>
+                    <button>Link1</button>                        
+                </div>
+                <button class="li">About us</button>
+                <div class="panel">
+                    <button>Link1</button>
+                    <button>Link1</button>
+                    <button>Link1</button>
+                    <button>Link1</button>                        
+                </div>
+                <button class="li">About us</button>
+                <div class="panel">
+                    <button>Link1</button>
+                    <button>Link1</button>
+                    <button>Link1</button>
+                    <button>Link1</button>                        
+                </div>
+                <button class="li">About us</button>
+                <div class="panel">
+                    <button>Link1</button>
+                    <button>Link1</button>
+                    <button>Link1</button>
+                    <button>Link1</button>                        
+                </div>
+                <button class="li">About us</button>
+                <div class="panel">
+                    <button>Link1</button>
+                    <button>Link1</button>
+                    <button>Link1</button>
+                    <button>Link1</button>                        
+                </div>
+                <button class="li">About us</button>
+                <div class="panel">
+                    <button>Link1</button>
+                    <button>Link1</button>
+                    <button>Link1</button>
+                    <button>Link1</button>                        
+                </div>
+               
+            </div>
+        </nav>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.links .li').click(function(){
+                if(false == $(this).next().is(':visible')){
+                    $('.links .panel').slideUp(300);
+                    $(this).next().slideToggle(300);
+                }else{
+                    $(this).next().slideUp(300);
+                }
+            });
+            $('.links .panel').eq(0).css("display", "flex");
+        });
+        const b = (b) => document.querySelector(b);
+        b('nav').onmouseover = function(){
+            this.classList.add('show-scroll');
+        }
+        b('nav').onmouseout = function(){
+            this.classList.remove('show-scroll');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    min-height: 100vh;
+    background: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.parent{
+    width: 450px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 3px 16px 3px rgba(0, 0, 0, 0.22),
+                0 6px 22px -48px rgba(00, 0, 0, 0);
+}
+.form{
+    margin: 30px;
+}
+header{
+    font-size: 25pt;
+    font-weight: 800;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.field label{
+    display: block;
+    font-size: 15pt;
+}
+.field input{
+    flex-grow: 1;
+    outline: none;
+    border-radius: 6px;
+    border: none;
+    height: 40px;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+.field{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.svg{
+    width: 25px;
+    height: 25px;
+}
+.svg2{
+    display: none;
+}
+.svg:hover{
+    cursor: pointer;
+}
+.field i{
+    right: 15px;
+    position: absolute;
+    top: 26%;
+    transform: translateY(50%);
+}
+.name-details{
+    display: flex;
+    flex-direction: row;
+}
+.name-details .field:last-child{
+    flex-grow: 1;
+}
+.name-details .field:first-child{
+    margin-right: 10px;
+    flex-grow: 1;
+}
+.field input[type="file"]{
+    border: none;
+}
+.btn{
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    background: #333;
+    color: #f7f7f7;
+    font-size: larger;
+}
+.p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    font-size: 17px;
+    color: black;
+}
+.p a{
+    color: black;
+    margin-left: 5px;
+}
+.p a:hover{
+    text-decoration: underline;
+}
+.span{
+    width: 400px;
+    height: 3rem;
+    background: rgb(209, 105, 105);
+    border: 1px solid red;
+    color: white;
+    border-radius: 10px;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    top: 1rem;
+    /* display: none; */
+}
+.span::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    left: 50%;
+    top: 100%;
+    border-color: red transparent transparent transparent;
+    position: absolute;
+}
